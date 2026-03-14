@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.ssitao.code</groupId>
+    <artifactId>ssitao-code-learn-mybatis</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>ssitao-codelearn-mybatis-step-01</module>
+        <module>ssitao-codelearn-mybatis-step-02</module>
+        <module>ssitao-codelearn-mybatis-step-03</module>
+        <module>ssitao-codelearn-mybatis-step-04</module>
+        <module>ssitao-codelearn-mybatis-step-05</module>
+        <module>ssitao-codelearn-mybatis-step-06</module>
+        <module>ssitao-codelearn-mybatis-step-07</module>
+        <module>ssitao-codelearn-mybatis-step-08</module>
+        <module>ssitao-codelearn-mybatis-step-09</module>
+        <module>ssitao-codelearn-mybatis-step-10</module>
+        <module>ssitao-codelearn-mybatis-step-11</module>
+    </modules>
+</project>
