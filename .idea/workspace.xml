@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5d6e1e64-e830-42cb-8e5d-e78ad5bfdfb5" name="更改" comment="2026年03月24日22:33:30">
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/array/Array.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/array/ArrayTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/hashtable/HashMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/hashtable/HashMapTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/hashtable/Map.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/linkedlist/DoubleLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/linkedlist/DoubleLinkedListTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/linkedlist/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/linkedlist/LinkedListTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/queue/ArrayQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/queue/CircleQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/queue/LinkedListQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/queue/Queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/queue/QueueTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/stack/ArrayStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/stack/LinkedListStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/stack/Stack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/stack/StackTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/tree/AVLTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/tree/AVLTreeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/tree/BSTTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/tree/BinarySearchTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-datastruct/src/main/java/com/ssitao/code/datastruct/tree/RedBlackTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssitao-code-effectivejava/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="package-info" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;xiaoss1993&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/xiaoss1993/ssitao-code-learn.git&quot;,
+    &quot;accountId&quot;: &quot;d1279039-fd34-4c3b-b434-bb014150c0e9&quot;
+  }
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="customMavenHome" value="$USER_HOME$/soft/apache-maven-3.9.6" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+        <option name="userSettingsFile" value="$USER_HOME$/soft/apache-maven-3.9.6/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="39qnKXjAaAYxVF5dJXzZtHdqmMd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.ApiTest.test_BeanFactory.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ssitao-code-learn [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ssitao-code-learn-mybatis [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ssitao-design-patterns [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ssitao-learn-spring [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;adopt-11&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ssitao/ssitao-workspace/ssitao-code-workspace/ssitao-code-learn/ssitao-code-concurrent/thread-base/src/main/java/com/ssitao/code/thread/code59&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.29770115&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;应用程序.App.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.BSTTest.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.BasicCommandDemo.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.BasicIteratorDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.BasicMediatorDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.BasicMementoDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.BasicObserverDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.BasicReaderWriterDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.BasicStrategyDemo.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.BasicTemplateDemo.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.BeanFactoryDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.BizIteratorDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.BizMediatorDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.BizReaderWriterDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.BizStrategyDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.BizTemplateDemo.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.CalendarDemo.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.ChainWithReturnValueDemo.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.CollectionIteratorDemo.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.DeepCopyByCglib.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.DeepCopyByClone (1).executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.DeepCopyByClone (2).executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.DeepCopyByClone.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.DeepCopyByCommons.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.DeepCopyByJson.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.DocumentBuilderFactoryDemo.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.FactoryBeanDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.GuiMediatorDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.HashMapTest.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.InternalIteratorDemo.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.JdkReadWriteLockDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.MacroCommandDemo.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.Main.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.MenuDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.OrderProcessingChainDemo.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.ProducerConsumerBasicDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.RemoteControlDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.SafeMain.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.ShallowCopyExample.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.SingletonDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.SnapshotDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.SpringCommandDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.SpringInterceptorChainDemo.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.SpringSingletonExample.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.SpringStrategyDemo.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.StateMachineDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.UndoRedoDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.WaitNotifyDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.WebCommandDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.WebMediatorDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.WebMementoDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.WebObserverDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.WebProducerConsumerDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.WebReaderWriterDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.WebStrategyDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.WebTemplateDemo.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.com.ssitao.code.concurrency.threadpool.App.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.com.ssitao.code.designpartten.prototype.App.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.com.ssitao.code.designparttern.factory.kit.App.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.com.ssitao.code.designpattern.command.App.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.com.ssitao.code.designpattern.facade.App.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.com.ssitao.code.designpattern.producer.consumer.App.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.com.ssitao.code.designpattern.strategy.App.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code02.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code03.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code04.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code05.Main.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code06.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code08.core.Main.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code09.core.Main.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code10.core.Main.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code11.core.Main.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code13.core.Main.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code14.core.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code15.core.Main.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code16.core.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code17.core.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code19.core.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code20.core.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code21.core.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code22.core.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code23.core.Main.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code25.core.Main.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code28.core.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code30.core.Main.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code31.core.Main.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code32.core.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code34.core.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code35.core.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code36.core.Main.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code37.core.Main.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code44.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code46.core.Main.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code47.core.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code48.core.Main.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code53.core.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.com.ssitao.code.thread.code58.core.Main.executor&quot;: &quot;Run&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.ssitao.code.designparttern.bridge" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ssitao-code-concurrent/thread-base/src/main/java/com/ssitao/code/thread/code59" />
+      <recent name="$PROJECT_DIR$/ssitao-code-concurrent/thread-base/src/main/java/com/ssitao/code/thread/code57" />
+      <recent name="$PROJECT_DIR$/ssitao-code-concurrent/thread-base/src/main/java/com/ssitao/code/thread/code56" />
+      <recent name="$PROJECT_DIR$/ssitao-code-concurrent/thread-base/src/main/java/com/ssitao/code/thread/code49" />
+      <recent name="$PROJECT_DIR$/ssitao-code-concurrent/thread-base/src/main/java/com/ssitao/code/thread/code48/task" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ssitao-design-parttern" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.ssitao.code.designparttern.abstractfactory" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ssitao.code.thread.code58.task" />
+      <recent name="com.ssitao.code.thread.code58.core" />
+      <recent name="com.ssitao.code.thread.code55.core" />
+      <recent name="com.ssitao.code.thread.code55.task" />
+      <recent name="com.ssitao.code.thread.code54.core" />
+    </key>
+  </component>
+  <component name="RunManager" selected="应用程序.BSTTest">
+    <configuration name="BSTTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ssitao.code.datastruct.tree.BSTTest" />
+      <module name="ssitao-code-datastruct" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ssitao.code.datastruct.tree.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HashMapTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ssitao.code.datastruct.hashtable.HashMapTest" />
+      <module name="ssitao-code-datastruct" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ssitao.code.datastruct.hashtable.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.ssitao.code.thread.code48.core.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ssitao.code.thread.code48.core.Main" />
+      <module name="thread-base" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ssitao.code.thread.code48.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.ssitao.code.thread.code53.core.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ssitao.code.thread.code53.core.Main" />
+      <module name="thread-base" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ssitao.code.thread.code53.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.ssitao.code.thread.code58.core.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ssitao.code.thread.code58.core.Main" />
+      <module name="thread-base" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ssitao.code.thread.code58.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.BSTTest" />
+        <item itemvalue="应用程序.HashMapTest" />
+        <item itemvalue="应用程序.com.ssitao.code.thread.code58.core.Main" />
+        <item itemvalue="应用程序.com.ssitao.code.thread.code53.core.Main" />
+        <item itemvalue="应用程序.com.ssitao.code.thread.code48.core.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-84258761d1cc-intellij.indexing.shared.core-IU-243.28141.18" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.28141.18" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="5d6e1e64-e830-42cb-8e5d-e78ad5bfdfb5" name="更改" comment="" />
+      <created>1771432407467</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1771432407467</updated>
+      <workItem from="1771432411800" duration="4693000" />
+      <workItem from="1772185129523" duration="1115000" />
+      <workItem from="1772186805793" duration="100000" />
+      <workItem from="1772244177838" duration="2225000" />
+      <workItem from="1772257471867" duration="1148000" />
+      <workItem from="1772708793421" duration="720000" />
+      <workItem from="1772934221148" duration="599000" />
+      <workItem from="1773031200050" duration="2581000" />
+      <workItem from="1773188487397" duration="11407000" />
+      <workItem from="1773360024409" duration="25103000" />
+      <workItem from="1773403045500" duration="12341000" />
+      <workItem from="1773446391286" duration="3733000" />
+      <workItem from="1773453494924" duration="3069000" />
+      <workItem from="1773457624027" duration="12696000" />
+      <workItem from="1773492267667" duration="254000" />
+      <workItem from="1773492780162" duration="104000" />
+      <workItem from="1773492895306" duration="2045000" />
+      <workItem from="1773664350315" duration="1607000" />
+      <workItem from="1773890992065" duration="44000" />
+      <workItem from="1773891177475" duration="193000" />
+      <workItem from="1774087825563" duration="735000" />
+      <workItem from="1774089131843" duration="6029000" />
+      <workItem from="1774139536465" duration="14798000" />
+      <workItem from="1774179891804" duration="40000" />
+      <workItem from="1774227074546" duration="26000" />
+      <workItem from="1774235827716" duration="8116000" />
+      <workItem from="1774273352144" duration="988000" />
+      <workItem from="1774312405818" duration="16978000" />
+      <workItem from="1774439243667" duration="1048000" />
+      <workItem from="1774488793040" duration="8000" />
+      <workItem from="1774511116326" duration="1115000" />
+      <workItem from="1774513811868" duration="4159000" />
+      <workItem from="1774658710593" duration="2356000" />
+      <workItem from="1774850228783" duration="1139000" />
+      <workItem from="1775102020761" duration="434000" />
+    </task>
+    <task id="LOCAL-00001" summary="2026年03月14日21:29:46&#10;代码学习">
+      <option name="closed" value="true" />
+      <created>1773495005609</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1773495005609</updated>
+    </task>
+    <task id="LOCAL-00002" summary="2026年03月22日19:44:57&#10;增加学习多线程代码示例">
+      <option name="closed" value="true" />
+      <created>1774179910054</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1774179910054</updated>
+    </task>
+    <task id="LOCAL-00003" summary="2026年03月22日19:44:57&#10;增加学习多线程代码示例">
+      <option name="closed" value="true" />
+      <created>1774179922912</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1774179922912</updated>
+    </task>
+    <task id="LOCAL-00004" summary="2026年03月23日15:44:25&#10;增加线程池相关代码学习">
+      <option name="closed" value="true" />
+      <created>1774251876308</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1774251876308</updated>
+    </task>
+    <task id="LOCAL-00005" summary="2026年03月23日22:00:45&#10;使用Fork/Join">
+      <option name="closed" value="true" />
+      <created>1774274454774</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1774274454774</updated>
+    </task>
+    <task id="LOCAL-00006" summary="2026年03月24日22:33:30">
+      <option name="closed" value="true" />
+      <created>1774362814515</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1774362814515</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="2026年03月14日21:06:37&#10;学习设计模式代码" />
+    <MESSAGE value="2026年03月14日21:29:46&#10;代码学习" />
+    <MESSAGE value="2026年03月22日19:44:57&#10;增加学习多线程代码示例" />
+    <MESSAGE value="2026年03月23日15:44:25&#10;增加线程池相关代码学习" />
+    <MESSAGE value="2026年03月23日22:00:45&#10;使用Fork/Join" />
+    <MESSAGE value="2026年03月24日22:33:30" />
+    <option name="LAST_COMMIT_MESSAGE" value="2026年03月24日22:33:30" />
+    <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
+  </component>
+</project>
