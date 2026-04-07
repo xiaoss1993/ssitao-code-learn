@@ -3,21 +3,34 @@ package com.ssitao.code.effectivejava.ch03.item17;
 import java.util.Objects;
 
 /**
- * Item 17: Minimize mutability
+ * 条目17：最小化可变性
  *
- * Demonstrates immutable class design
+ * 不可变类的五大原则：
+ * 1. 不提供修改对象状态的方法（如setter）
+ * 2. 确保类不会被继承（用final修饰或私有构造器）
+ * 3. 所有字段用final修饰
+ * 4. 所有字段用private修饰
+ * 5. 确保对可变组件的访问是独占的（如防御性拷贝）
+ *
+ * 不可变类的优点：
+ * - 线程安全：无需同步
+ * - 可自由共享：无需拷贝防御
+ * - 失败原子性：状态不会被异常破坏
+ * - 易于设计：状态不会变化
  */
 public final class Complex {
-    private final double re;
-    private final double im;
+    private final double re;  // 实部
+    private final double im;  // 虚部
 
-    // Immutable class - no setters, returns new instances
+    /**
+     * 不可变类 - 没有setter，所有操作返回新实例
+     */
     public Complex(double re, double im) {
         this.re = re;
         this.im = im;
     }
 
-    // Static factory methods
+    // 静态工厂方法
     public static Complex valueOf(double re, double im) {
         return new Complex(re, im);
     }
@@ -26,11 +39,13 @@ public final class Complex {
         return new Complex(re, im);
     }
 
-    // Getters (no setters - immutable!)
+    // Getter（没有setter！）
     public double getReal() { return re; }
     public double getImaginary() { return im; }
 
-    // Arithmetic operations - return NEW instances
+    /**
+     * 算术运算 - 返回新的实例，原对象不变
+     */
     public Complex add(Complex other) {
         return new Complex(re + other.re, im + other.im);
     }
@@ -78,7 +93,7 @@ public final class Complex {
     }
 
     public static void main(String[] args) {
-        System.out.println("=== Immutable Class Demo ===\n");
+        System.out.println("=== 不可变类示例 ===\n");
 
         Complex a = new Complex(1.0, 2.0);
         Complex b = new Complex(3.0, 4.0);
@@ -88,16 +103,16 @@ public final class Complex {
 
         Complex c = a.add(b);
         System.out.println("a.add(b) = " + c);
-        System.out.println("a is still = " + a);  // a unchanged (immutable!)
+        System.out.println("a 仍然是 = " + a);  // a未改变（不可变！）
 
         Complex d = a.multiply(b);
         System.out.println("a.multiply(b) = " + d);
 
-        // Demonstrate thread safety
-        System.out.println("\n--- Thread Safety ---");
-        System.out.println("Immutable objects are inherently thread-safe:");
-        System.out.println("- No synchronization needed");
-        System.out.println("- No possibility of inconsistent state");
-        System.out.println("- Can be freely shared");
+        // 演示线程安全性
+        System.out.println("\n--- 线程安全性 ---");
+        System.out.println("不可变对象天生线程安全：");
+        System.out.println("- 无需同步");
+        System.out.println("- 不可能出现不一致的状态");
+        System.out.println("- 可以自由共享");
     }
 }

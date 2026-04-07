@@ -7,35 +7,48 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /**
- * Item 9: Try-with-resources for automatic resource management
+ * 条目9：使用try-with-resources处理自动资源管理
  *
- * Demonstrates the proper way to handle closeable resources
+ * try-with-resources的优点：
+ * 1. 自动关闭资源：即使发生异常也会调用close()
+ * 2. 保留被抑制的异常：可以同时看到主异常和close()抛出的异常
+ * 3. 代码更简洁：无需手动在finally中关闭资源
+ * 4. 防止资源泄漏：确保资源被正确关闭
+ *
+ * 只要实现了AutoCloseable接口的类都可以使用TWR
  */
 public class TryWithResources {
 
-    // ==================== Problem: Traditional try-finally ====================
-    // Traditional way - verbose and error-prone
+    // ==================== 问题：传统的try-finally ====================
+    /**
+     * 传统方式 - 冗长且容易出错
+     * 问题：如果readLine()抛出异常，close()可能不会执行
+     */
     static String readFirstLine(String path) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(path));
         try {
             return br.readLine();
         } finally {
             if (br != null) {
-                br.close();  // Error-prone: if readLine() throws, close() might not run
+                br.close();  // 容易出错：如果readLine()抛异常，close()可能不执行
             }
         }
     }
 
-    // ==================== Solution: Try-with-resources ====================
-    // Automatically closes resources, even if exception occurs
+    // ==================== 解决方案：try-with-resources ====================
+    /**
+     * TWR方式 - 自动关闭资源，即使发生异常
+     */
     static String readFirstLineBetter(String path) throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             return br.readLine();
-        }  // br.close() called automatically
+        }  // br.close() 自动调用
     }
 
-    // ==================== Multiple Resources ====================
-    // Easy to handle multiple resources
+    // ==================== 多个资源 ====================
+    /**
+     * 轻松处理多个资源
+     */
     static void copyFile(String source, String target) throws IOException {
         try (BufferedReader in = new BufferedReader(new FileReader(source));
              BufferedWriter out = new BufferedWriter(new FileWriter(target))) {
@@ -44,71 +57,80 @@ public class TryWithResources {
                 out.write(line);
                 out.newLine();
             }
-        }  // Both in and out closed automatically
+        }  // in和out都会自动关闭
     }
 
-    // ==================== Suppressed Exceptions ====================
-    // Try-with-resources preserves both primary and suppressed exceptions
+    // ==================== 被抑制的异常 ====================
+    /**
+     * TWR保留主异常和被抑制的异常
+     * 如果close()也抛出异常，原异常会被保留，close()的异常被抑制
+     */
     static void demonstrateSuppressed() {
         try (AutoCloseableDemo demo = new AutoCloseableDemo()) {
             demo.doSomething();
         } catch (Exception e) {
-            System.out.println("Exception caught: " + e.getMessage());
-            System.out.println("Suppressed exceptions: " + e.getSuppressed().length);
+            System.out.println("捕获的异常: " + e.getMessage());
+            System.out.println("被抑制的异常数量: " + e.getSuppressed().length);
             for (Throwable t : e.getSuppressed()) {
-                System.out.println("  Suppressed: " + t.getMessage());
+                System.out.println("  被抑制的: " + t.getMessage());
             }
         }
     }
 
-    // ==================== Custom Resource Class ====================
+    // ==================== 自定义资源类 ====================
+    /**
+     * 数据库连接 - 实现AutoCloseable接口
+     */
     static class DatabaseConnection implements AutoCloseable {
         private final String name;
         private boolean closed = false;
 
         public DatabaseConnection(String name) {
             this.name = name;
-            System.out.println("Opening connection: " + name);
+            System.out.println("打开连接: " + name);
         }
 
         public void query(String sql) {
-            if (closed) throw new IllegalStateException("Connection closed");
-            System.out.println("Executing: " + sql);
+            if (closed) throw new IllegalStateException("连接已关闭");
+            System.out.println("执行: " + sql);
         }
 
         @Override
         public void close() {
             if (closed) return;
             closed = true;
-            System.out.println("Closing connection: " + name);
+            System.out.println("关闭连接: " + name);
         }
     }
 
     static void databaseExample() {
-        System.out.println("\n=== Database Connection Demo ===");
+        System.out.println("\n=== 数据库连接示例 ===");
 
-        // Try-with-resources ensures proper cleanup
+        // TWR确保资源正确清理
         try (DatabaseConnection conn = new DatabaseConnection("MAIN_DB")) {
             conn.query("SELECT * FROM users");
         } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
+            System.out.println("错误: " + e.getMessage());
         }
 
-        // Multiple resources
-        System.out.println("\n--- Multiple Connections ---");
+        // 多个资源
+        System.out.println("\n--- 多个连接 ---");
         try (DatabaseConnection conn1 = new DatabaseConnection("DB1");
              DatabaseConnection conn2 = new DatabaseConnection("DB2")) {
-            conn1.query("SELECT FROM DB1");
-            conn2.query("SELECT FROM DB2");
+            conn1.query("从DB1查询");
+            conn2.query("从DB2查询");
         } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
+            System.out.println("错误: " + e.getMessage());
         }
     }
 
-    // ==================== Resource with Exception in Constructor ====================
+    // ==================== 构造器中抛异常的资源 ====================
+    /**
+     * 资源A：构造器抛异常
+     */
     static class ResourceA implements AutoCloseable {
         public ResourceA() throws Exception {
-            throw new Exception("Failed to create ResourceA");
+            throw new Exception("创建ResourceA失败");
         }
 
         @Override
@@ -117,9 +139,12 @@ public class TryWithResources {
         }
     }
 
+    /**
+     * 资源B：正常构造
+     */
     static class ResourceB implements AutoCloseable {
         public ResourceB() {
-            System.out.println("ResourceB created");
+            System.out.println("ResourceB已创建");
         }
 
         @Override
@@ -129,52 +154,39 @@ public class TryWithResources {
     }
 
     static void resourceCreationOrder() {
-        System.out.println("\n=== Resource Creation Order ===");
+        System.out.println("\n=== 资源创建顺序 ===");
 
-        // ResourceB IS closed even if ResourceA construction fails
-        // But ResourceA.close() is NOT called because it was never created
+        // ResourceB会被关闭，即使ResourceA构造失败
+        // 但ResourceA.close()不会被调用，因为它从未被创建
         try (ResourceB b = new ResourceB();
              ResourceA a = new ResourceA()) {
-            System.out.println("Using resources");
+            System.out.println("使用资源");
         } catch (Exception e) {
-            System.out.println("Exception: " + e.getMessage());
-            System.out.println("Only ResourceB was created, so only ResourceB.close() is called");
+            System.out.println("异常: " + e.getMessage());
+            System.out.println("只有ResourceB被创建，所以只有ResourceB.close()被调用");
         }
     }
 
-    // ==================== Helper Classes for Demo ====================
+    // ==================== 示例辅助类 ====================
+    /**
+     * 演示：doSomething()和close()都抛异常
+     */
     static class AutoCloseableDemo implements AutoCloseable {
         public void doSomething() throws Exception {
-            throw new Exception("Primary exception in doSomething()");
+            throw new Exception("doSomething()中的主异常");
         }
 
         @Override
         public void close() throws Exception {
-            throw new Exception("Suppressed exception in close()");
+            throw new Exception("close()中的被抑制异常");
         }
     }
 
-    // ==================== JDK Resources Using TWR ====================
+    // ==================== JDK中使用TWR的类 ====================
     static void jdkExamples() {
-        System.out.println("\n=== JDK Resource Examples ===");
+        System.out.println("\n=== JDK中的TWR示例 ===");
 
-        // java.nio.file.Files.lines()
-        // try (Stream<String> lines = Files.lines(path)) {
-        //     lines.forEach(System.out::println);
-        // }
-
-        // java.sql
-        // try (Connection conn = ds.getConnection();
-        //      Statement stmt = conn.createStatement()) {
-        //     ResultSet rs = stmt.executeQuery(query);
-        // }
-
-        // java.util.zip.ZipFile
-        // try (ZipFile zf = new ZipFile(zipFileName)) {
-        //     // process entries
-        // }
-
-        System.out.println("Common JDK classes implementing AutoCloseable:");
+        System.out.println("实现了AutoCloseable的常用JDK类:");
         System.out.println("- java.io.InputStream, OutputStream, Reader, Writer");
         System.out.println("- java.sql.Connection, Statement, ResultSet");
         System.out.println("- java.nio.channels.Channel");
@@ -184,19 +196,19 @@ public class TryWithResources {
 
     public static void main(String[] args) {
         System.out.println("========================================");
-        System.out.println("Try-with-Resources Demo");
+        System.out.println("Try-with-Resources 示例");
         System.out.println("========================================\n");
 
-        System.out.println("--- Traditional vs TWR ---");
-        System.out.println("Traditional try-finally:");
-        System.out.println("  - Manual close() call required");
-        System.out.println("  - Error-prone with exceptions");
-        System.out.println("  - Verbose code");
+        System.out.println("--- 传统方式 vs TWR ---");
+        System.out.println("传统try-finally:");
+        System.out.println("  - 需要手动调用close()");
+        System.out.println("  - 异常处理容易出错");
+        System.out.println("  - 代码冗长");
 
-        System.out.println("\nTry-with-resources:");
-        System.out.println("  - Automatic close()");
-        System.out.println("  - Suppressed exceptions preserved");
-        System.out.println("  - Cleaner, readable code");
+        System.out.println("\ntry-with-resources:");
+        System.out.println("  - 自动调用close()");
+        System.out.println("  - 保留被抑制的异常");
+        System.out.println("  - 代码更简洁清晰");
 
         databaseExample();
         demonstrateSuppressed();
@@ -204,11 +216,11 @@ public class TryWithResources {
         jdkExamples();
 
         System.out.println("\n========================================");
-        System.out.println("Key Benefits:");
-        System.out.println("1. Automatic resource cleanup");
-        System.out.println("2. Preserves exception information");
-        System.out.println("3. Cleaner, more readable code");
-        System.out.println("4. Prevents resource leaks");
+        System.out.println("主要优点:");
+        System.out.println("1. 自动资源清理");
+        System.out.println("2. 保留异常信息");
+        System.out.println("3. 代码更简洁清晰");
+        System.out.println("4. 防止资源泄漏");
         System.out.println("========================================");
     }
 }

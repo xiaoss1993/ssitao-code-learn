@@ -6,12 +6,21 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Item 18: Favor composition over inheritance
+ * 条目18：组合优于继承
  *
- * Demonstrates why composition is better than inheritance
+ * 继承的问题：
+ * - 父类的内部实现可能变化，破坏子类
+ * - 父类新增方法可能与子类意图不符
+ * - 可能违反"is-a"关系
+ *
+ * 本例演示：继承HashSet时，addAll内部调用add，导致计数错误
  */
 
-// ==================== WRONG: Inheritance ====================
+// ==================== 错误：继承 ====================
+/**
+ * 通过继承实现的计数Set
+ * 问题：HashSet的addAll内部调用add，导致计数翻倍！
+ */
 class InstrumentedHashSet<E> extends HashSet<E> {
     private int addCount = 0;
 
@@ -32,9 +41,14 @@ class InstrumentedHashSet<E> extends HashSet<E> {
     }
 }
 
-// ==================== CORRECT: Composition ====================
+// ==================== 正确：组合 ====================
+/**
+ * 通过组合实现的计数Set
+ * 组合：将需要功能的对象作为字段，通过委托实现
+ * 这样我们完全控制实现，不会被父类影响
+ */
 class InstrumentedSet<E> {
-    private final Set<E> inner;
+    private final Set<E> inner;  // 组合：持有另一个Set
     private int addCount = 0;
 
     public InstrumentedSet(Set<E> inner) {
@@ -55,7 +69,7 @@ class InstrumentedSet<E> {
         return addCount;
     }
 
-    // Delegate other methods
+    // 委托其他方法
     public boolean contains(Object o) {
         return inner.contains(o);
     }
@@ -71,22 +85,22 @@ class InstrumentedSet<E> {
 
 public class InstrumentedSetDemo {
     public static void main(String[] args) {
-        System.out.println("=== Composition vs Inheritance Demo ===\n");
+        System.out.println("=== 组合 vs 继承示例 ===\n");
 
-        // Problem with inheritance
-        System.out.println("--- Inheritance (WRONG) ---");
+        // 继承的问题
+        System.out.println("--- 继承（错误） ---");
         InstrumentedHashSet<String> inheritanceSet = new InstrumentedHashSet<>();
         inheritanceSet.addAll(Arrays.asList("Snap", "Crackle", "Pop"));
-        System.out.println("Expected addCount: 3");
-        System.out.println("Actual addCount: " + inheritanceSet.getAddCount());
-        // Problem: addCount is 6 because addAll() calls add() internally!
+        System.out.println("期望的addCount: 3");
+        System.out.println("实际的addCount: " + inheritanceSet.getAddCount());
+        // 问题：addCount是6，因为addAll()内部调用了add()！
 
-        // Correct with composition
-        System.out.println("\n--- Composition (CORRECT) ---");
+        // 组合的正确做法
+        System.out.println("\n--- 组合（正确） ---");
         InstrumentedSet<String> compositionSet = new InstrumentedSet<>(new HashSet<>());
         compositionSet.addAll(Arrays.asList("Snap", "Crackle", "Pop"));
-        System.out.println("Expected addCount: 3");
-        System.out.println("Actual addCount: " + compositionSet.getAddCount());
-        // Correct: 3 because we control the implementation
+        System.out.println("期望的addCount: 3");
+        System.out.println("实际的addCount: " + compositionSet.getAddCount());
+        // 正确：3，因为我们控制了实现
     }
 }

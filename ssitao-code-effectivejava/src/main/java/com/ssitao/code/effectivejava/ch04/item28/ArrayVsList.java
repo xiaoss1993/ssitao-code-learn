@@ -1,54 +1,61 @@
 package com.ssitao.code.effectivejava.ch04.item28;
 
 /**
- * Item 28: Prefer lists to arrays
+ * 条目28：列表优于数组
  *
- * Demonstrates why arrays are less safe than lists
+ * 数组的问题：
+ * 1. 数组是协变的（covariant）：String[] 是 Object[] 的子类型
+ *    - 这导致可以在编译时通过，但运行时抛出 ArrayStoreException
+ * 2. 泛型是不变的（invariant）：List<String> 不是 List<Object> 的子类型
+ *    - 这在编译时就能捕获错误，更安全
+ * 3. 数组不支持泛型：不能创建 new List<E>() 或 new E[]
+ *
+ * 结论：优先使用泛型集合（如List<E>），而不是数组
  */
 import java.util.ArrayList;
 import java.util.List;
 
 public class ArrayVsList {
     public static void main(String[] args) {
-        System.out.println("=== Arrays vs Lists ===\n");
+        System.out.println("=== 数组 vs 列表 ===\n");
 
-        // Problem 1: Arrays are covariant (unsafe)
-        System.out.println("--- Problem 1: Covariance ---");
+        // 问题1：数组是协变的（不安全）
+        System.out.println("--- 问题1：协变性 ---");
 
-        // String[] is a subtype of Object[]
+        // String[] 是 Object[] 的子类型
         Object[] objArr = new String[3];
-        System.out.println("String[] is a subtype of Object[]: OK at compile time");
+        System.out.println("String[] 是 Object[] 的子类型：编译时正确");
 
         try {
-            objArr[0] = 123;  // But runtime ArrayStoreException!
-            System.out.println("Stored Integer in String[] - should not reach here");
+            objArr[0] = 123;  // 但运行时会抛出 ArrayStoreException！
+            System.out.println("在String[]中存储Integer - 不应该到达这里");
         } catch (ArrayStoreException e) {
             System.out.println("ArrayStoreException: " + e.getMessage());
         }
 
-        // Problem 2: Generic types are invariant (safe)
-        System.out.println("\n--- Problem 2: Invariance ---");
-        // List<String> is NOT a subtype of List<Object>
-        // List<String> stringList = new ArrayList<Object>();  // Compile error!
-        System.out.println("List<String> is NOT a subtype of List<Object>: compile error");
+        // 问题2：泛型是不变的（安全）
+        System.out.println("\n--- 问题2：不变性 ---");
+        // List<String> 不是 List<Object> 的子类型
+        // List<String> stringList = new ArrayList<Object>();  // 编译错误！
+        System.out.println("List<String> 不是 List<Object> 的子类型：编译错误");
 
-        // Generic list catches type errors at compile time
+        // 泛型列表在编译时捕获类型错误
         List<String> stringList = new ArrayList<>();
-        // stringList.add(123);  // Compile error!
-        System.out.println("Adding Integer to List<String>: compile error (caught at compile time)");
+        // stringList.add(123);  // 编译错误！
+        System.out.println("向 List<String> 添加 Integer：编译错误（在编译时捕获）");
 
-        // Problem 3: Arrays don't support generics
-        System.out.println("\n--- Problem 3: Arrays don't support generics ---");
-        // new List<E>() - compile error, can't create generic arrays
-        // new E[] - compile error, can't create generic arrays
+        // 问题3：数组不支持泛型
+        System.out.println("\n--- 问题3：数组不支持泛型 ---");
+        // new List<E>() - 编译错误，不能创建泛型数组
+        // new E[] - 编译错误，不能创建泛型数组
 
-        List<String>[] stringLists = (List<String>[]) new ArrayList<?>[3];  // Unchecked cast
-        System.out.println("Must use unchecked cast to create generic array: (List<String>[]) new ArrayList<?>[3]");
+        List<String>[] stringLists = (List<String>[]) new ArrayList<?>[3];  // 需要unchecked转换
+        System.out.println("创建泛型数组必须使用unchecked转换: (List<String>[]) new ArrayList<?>[3]");
 
-        System.out.println("\n--- Conclusion ---");
-        System.out.println("Lists are safer than arrays:");
-        System.out.println("1. Type errors caught at compile time, not runtime");
-        System.out.println("2. No ClassCastException or ArrayStoreException");
-        System.out.println("3. Full generic type support");
+        System.out.println("\n--- 结论 ---");
+        System.out.println("列表比数组更安全：");
+        System.out.println("1. 类型错误在编译时捕获，而非运行时");
+        System.out.println("2. 没有 ClassCastException 或 ArrayStoreException");
+        System.out.println("3. 完全支持泛型");
     }
 }

@@ -5,12 +5,22 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Item 5: Prefer dependency injection
+ * 条目5：优先使用依赖注入
+ *
+ * 依赖注入的优点：
+ * 1. 解耦：类不需要自己创建依赖对象
+ * 2. 可测试性：可以注入mock对象进行单元测试
+ * 3. 灵活性：可以在运行时替换不同的实现
+ * 4. 清晰性：依赖关系一目了然
+ *
+ * 本例演示如何通过构造器注入不同的字典实现
  */
 public class SpellChecker {
     private final Dictionary dictionary;
 
-    // Dependency injection via constructor
+    /**
+     * 通过构造器注入依赖
+     */
     public SpellChecker(Dictionary dictionary) {
         this.dictionary = dictionary;
     }
@@ -20,25 +30,31 @@ public class SpellChecker {
     }
 
     public static void main(String[] args) {
-        System.out.println("=== Dependency Injection Demo ===\n");
+        System.out.println("=== 依赖注入示例 ===\n");
 
-        // Inject English dictionary
+        // 注入英语字典
         SpellChecker englishChecker = new SpellChecker(new EnglishDictionary());
-        System.out.println("Using English dictionary:");
-        System.out.println("\"hello\" is valid: " + englishChecker.isValid("hello"));
-        System.out.println("\"helo\" is valid: " + englishChecker.isValid("helo"));
+        System.out.println("使用英语字典:");
+        System.out.println("\"hello\" 是否有效: " + englishChecker.isValid("hello"));
+        System.out.println("\"helo\" 是否有效: " + englishChecker.isValid("helo"));
 
-        // Inject French dictionary - same code, different behavior
+        // 注入法语字典 - 相同代码，不同行为
         SpellChecker frenchChecker = new SpellChecker(new FrenchDictionary());
-        System.out.println("\nUsing French dictionary:");
-        System.out.println("\"bonjour\" is valid: " + frenchChecker.isValid("bonjour"));
+        System.out.println("\n使用法语字典:");
+        System.out.println("\"bonjour\" 是否有效: " + frenchChecker.isValid("bonjour"));
     }
 }
 
+/**
+ * 字典接口 - 定义拼写检查的契约
+ */
 interface Dictionary {
     boolean contains(String word);
 }
 
+/**
+ * 英语字典实现
+ */
 class EnglishDictionary implements Dictionary {
     private static final Set<String> WORDS = new HashSet<>(Arrays.asList(
         "hello", "world", "java", "programming"
@@ -50,6 +66,9 @@ class EnglishDictionary implements Dictionary {
     }
 }
 
+/**
+ * 法语字典实现
+ */
 class FrenchDictionary implements Dictionary {
     private static final Set<String> WORDS = new HashSet<>(Arrays.asList(
         "bonjour", "merci", "france", "paris"

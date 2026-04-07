@@ -1,14 +1,21 @@
 package com.ssitao.code.effectivejava.ch02.item08;
 
 /**
- * Item 8: Obey the general contract when overriding equals
+ * 条目8：重写equals时遵守通用约定
  *
- * Demonstrates proper equals() implementation
+ * equals必须满足的契约：
+ * 1. 自反性：x.equals(x) 必须返回true
+ * 2. 对称性：x.equals(y) 和 y.equals(x) 结果相同
+ * 3. 传递性：x.equals(y)且y.equals(z)，则x.equals(z)
+ * 4. 一致性：多次调用结果相同（除非对象被修改）
+ * 5. 非空性：x.equals(null) 必须返回false
+ *
+ * 注意：继承时可能违反对称性和传递性
  */
 public class PhoneNumber {
-    private final short areaCode;
-    private final short prefix;
-    private final short lineNum;
+    private final short areaCode;  // 区号
+    private final short prefix;    // 前缀
+    private final short lineNum;   // 号码
 
     public PhoneNumber(short areaCode, short prefix, short lineNum) {
         this.areaCode = areaCode;
@@ -20,25 +27,27 @@ public class PhoneNumber {
     public short getPrefix() { return prefix; }
     public short getLineNum() { return lineNum; }
 
-    // CORRECT equals implementation
+    /**
+     * 正确的equals实现
+     */
     @Override
     public boolean equals(Object obj) {
-        // 1. Check if same reference
+        // 1. 检查是否同一引用（自反性）
         if (this == obj) {
             return true;
         }
 
-        // 2. Check if null
+        // 2. 检查是否为null（非空性）
         if (obj == null) {
             return false;
         }
 
-        // 3. Check if same class
+        // 3. 检查是否是同一个类（对称性）
         if (getClass() != obj.getClass()) {
             return false;
         }
 
-        // 4. Cast and compare fields
+        // 4. 转型并比较字段
         PhoneNumber other = (PhoneNumber) obj;
         return areaCode == other.areaCode
             && prefix == other.prefix
@@ -51,24 +60,24 @@ public class PhoneNumber {
     }
 
     public static void main(String[] args) {
-        System.out.println("=== Proper equals() Demo ===\n");
+        System.out.println("=== 正确的equals()示例 ===\n");
 
         PhoneNumber pn1 = new PhoneNumber((short) 707, (short) 867, (short) 5309);
         PhoneNumber pn2 = new PhoneNumber((short) 707, (short) 867, (short) 5309);
         PhoneNumber pn3 = new PhoneNumber((short) 212, (short) 555, (short) 1212);
 
-        // Reflexive: x.equals(x) must be true
-        System.out.println("Reflexive: pn1.equals(pn1) = " + pn1.equals(pn1));
+        // 自反性：x.equals(x) 必须为true
+        System.out.println("自反性: pn1.equals(pn1) = " + pn1.equals(pn1));
 
-        // Symmetric: x.equals(y) == y.equals(x)
-        System.out.println("Symmetric: pn1.equals(pn2) = " + pn1.equals(pn2));
-        System.out.println("Symmetric: pn2.equals(pn1) = " + pn2.equals(pn1));
+        // 对称性：x.equals(y) == y.equals(x)
+        System.out.println("对称性: pn1.equals(pn2) = " + pn1.equals(pn2));
+        System.out.println("对称性: pn2.equals(pn1) = " + pn2.equals(pn1));
 
-        // Different objects with same values should be equal
-        System.out.println("pn1 == pn2: " + (pn1 == pn2) + " (different references)");
-        System.out.println("pn1.equals(pn2): " + pn1.equals(pn2) + " (but equal by equals())");
+        // 值相同但不同引用的对象应该相等
+        System.out.println("pn1 == pn2: " + (pn1 == pn2) + " (不同引用)");
+        System.out.println("pn1.equals(pn2): " + pn1.equals(pn2) + " (equals返回true)");
 
-        // Null check
+        // 非空性
         System.out.println("pn1.equals(null): " + pn1.equals(null));
     }
 }
