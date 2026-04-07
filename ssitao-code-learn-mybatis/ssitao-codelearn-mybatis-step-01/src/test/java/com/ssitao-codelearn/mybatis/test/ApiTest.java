@@ -1,7 +1,7 @@
-package com.ssitao.codelearn.mybatis.test;
+package com.ssitao.code.learn.mybatis.test;
 
-import com.ssitao.codelearn.mybatis.binding.MapperProxyFactory;
-import com.ssitao.codelearn.mybatis.test.dao.IUserDao;
+import com.ssitao.code.learn.mybatis.binding.MapperProxyFactory;
+import com.ssitao.code.learn.mybatis.test.dao.IUserDao;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,8 +24,8 @@ public class ApiTest {
         MapperProxyFactory<IUserDao> factory = new MapperProxyFactory<>(IUserDao.class);
 
         Map<String,String>  sqlSession = new HashMap<>();
-        sqlSession.put("com.ssitao.codelearn.mybatis.test.dao.IUserDao.queryUserNameById","模拟执行 Mapper.xml 中的SQL操作，查询用户姓名");
-        sqlSession.put("com.ssitao.codelearn.mybatis.test.dao.IUserDao.queryUserAgeById","模拟执行 Mapper.xml 中的SQL操作，查询用户年龄");
+        sqlSession.put("com.ssitao.code.learn.mybatis.test.dao.IUserDao.queryUserNameById","模拟执行 Mapper.xml 中的SQL操作，查询用户姓名");
+        sqlSession.put("com.ssitao.code.learn.mybatis.test.dao.IUserDao.queryUserAgeById","模拟执行 Mapper.xml 中的SQL操作，查询用户年龄");
         IUserDao userDao = factory.newInstance(sqlSession);
         String userName  = userDao.queryUserNameById("10001");
         logger.info("测试结果: userName:{}",userName);

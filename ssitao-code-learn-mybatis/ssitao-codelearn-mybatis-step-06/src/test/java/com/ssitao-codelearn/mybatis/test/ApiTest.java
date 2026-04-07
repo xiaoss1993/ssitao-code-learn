@@ -1,14 +1,14 @@
-package com.ssitao.codelearn.mybatis.test;
+package com.ssitao.code.learn.mybatis.test;
 
 import com.alibaba.fastjson.JSON;
-import com.ssitao.codelearn.mybatis.binding.MapperRegistry;
-import com.ssitao.codelearn.mybatis.io.Resources;
-import com.ssitao.codelearn.mybatis.session.SqlSession;
-import com.ssitao.codelearn.mybatis.session.SqlSessionFactory;
-import com.ssitao.codelearn.mybatis.session.SqlSessionFactoryBuilder;
-import com.ssitao.codelearn.mybatis.session.defaults.DefaultSqlSessionFactory;
-import com.ssitao.codelearn.mybatis.test.dao.IUserDao;
-import com.ssitao.codelearn.mybatis.test.po.User;
+import com.ssitao.code.learn.mybatis.binding.MapperRegistry;
+import com.ssitao.code.learn.mybatis.io.Resources;
+import com.ssitao.code.learn.mybatis.session.SqlSession;
+import com.ssitao.code.learn.mybatis.session.SqlSessionFactory;
+import com.ssitao.code.learn.mybatis.session.SqlSessionFactoryBuilder;
+import com.ssitao.code.learn.mybatis.session.defaults.DefaultSqlSessionFactory;
+import com.ssitao.code.learn.mybatis.test.dao.IUserDao;
+import com.ssitao.code.learn.mybatis.test.po.User;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

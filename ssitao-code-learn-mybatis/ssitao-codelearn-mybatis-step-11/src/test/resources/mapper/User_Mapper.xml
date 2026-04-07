@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ssitao.codelearn.mybatis.test.dao.IUserDao">
+<mapper namespace="com.ssitao.code.learn.mybatis.test.dao.IUserDao">
 
 
-    <select id="queryUserInfoById" parameterType="java.lang.Long" resultType="com.ssitao.codelearn.mybatis.test.po.User">
+    <select id="queryUserInfoById" parameterType="java.lang.Long" resultType="com.ssitao.code.learn.mybatis.test.po.User">
         SELECT id, userId, userName, userHead
         FROM user
         where id = #{id,jdbcType=BIGINT}
     </select>
 
-    <select id="queryUserInfo" parameterType="com.ssitao.codelearn.mybatis.test.po.User" resultType="com.ssitao.codelearn.mybatis.test.po.User">
+    <select id="queryUserInfo" parameterType="com.ssitao.code.learn.mybatis.test.po.User" resultType="com.ssitao.code.learn.mybatis.test.po.User">
         SELECT id, userId, userName, userHead
         FROM user
         where (#{id,jdbcType=BIGINT} is null or id = #{id,jdbcType=BIGINT})
         and (#{userId,jdbcType=VARCHAR} is null or userId = #{userId,jdbcType=VARCHAR})
     </select>
 
-    <insert id="insertUser" parameterType="com.ssitao.codelearn.mybatis.test.po.User">
+    <insert id="insertUser" parameterType="com.ssitao.code.learn.mybatis.test.po.User">
         INSERT INTO user (userId, userName, userHead, createTime, updateTime)
         VALUES (#{userId,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, #{userHead,jdbcType=VARCHAR}, NOW(), NOW())
     </insert>
 
-    <update id="updateUser" parameterType="com.ssitao.codelearn.mybatis.test.po.User">
+    <update id="updateUser" parameterType="com.ssitao.code.learn.mybatis.test.po.User">
         UPDATE user
         SET userName = #{userName,jdbcType=VARCHAR}, userHead = #{userHead,jdbcType=VARCHAR}, updateTime = NOW()
         WHERE id = #{id,jdbcType=BIGINT}

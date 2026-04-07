@@ -1,4 +1,4 @@
-package com.ssitao.codelearn.mybatis.test.dao;
+package com.ssitao.code.learn.mybatis.test.dao;
 
 public interface IUserDao {
 

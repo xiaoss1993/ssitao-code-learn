@@ -1,8 +1,8 @@
-package com.ssitao.codelearn.mybatis.test;
+package com.ssitao.code.learn.mybatis.test;
 
 import com.alibaba.fastjson.JSON;
-import com.ssitao.codelearn.mybatis.reflection.MetaObject;
-import com.ssitao.codelearn.mybatis.reflection.SystemMetaObject;
+import com.ssitao.code.learn.mybatis.reflection.MetaObject;
+import com.ssitao.code.learn.mybatis.reflection.SystemMetaObject;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

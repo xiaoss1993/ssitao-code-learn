@@ -1,4 +1,4 @@
-package com.ssitao.codelearn.mybatis.test.po;
+package com.ssitao.code.learn.mybatis.test.po;
 
 import lombok.Data;
 
