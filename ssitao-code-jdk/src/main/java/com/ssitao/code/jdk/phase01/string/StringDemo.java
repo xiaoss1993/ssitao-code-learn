@@ -78,7 +78,6 @@ public class StringDemo {
         String withSpaces = "  Hello World  ";
         System.out.println("withSpaces = \"  Hello World  \"");
         System.out.println("withSpaces.trim() = \"" + withSpaces.trim() + "\"");
-        System.out.println("withSpaces.strip() = \"" + withSpaces.strip() + "\"");
         System.out.println();
 
         // 9. 字符串拼接

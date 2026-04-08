@@ -29,12 +29,8 @@ public class MathDemo {
         // 3. 绝对值
         System.out.println("--- 3. 绝对值 ---");
         System.out.println("Math.abs(-10) = " + Math.abs(-10));
-        System.out.println("Math.absExact(Integer.MIN_VALUE) = " + Math.absExact(Integer.MIN_VALUE) + " (溢出时抛异常)");
-        try {
-            Math.absExact(Integer.MIN_VALUE);
-        } catch (ArithmeticException e) {
-            System.out.println("Integer.MIN_VALUE绝对值溢出,抛ArithmeticException!");
-        }
+        System.out.println("Math.abs(Integer.MIN_VALUE) = " + Math.abs(Integer.MIN_VALUE) + " (溢出,结果还是负数)");
+        System.out.println("Integer.MIN_VALUE绝对值溢出,结果越界");
         System.out.println();
 
         // 4. 最大最小值

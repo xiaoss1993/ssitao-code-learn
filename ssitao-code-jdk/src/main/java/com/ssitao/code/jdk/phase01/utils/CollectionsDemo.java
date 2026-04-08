@@ -58,13 +58,6 @@ public class CollectionsDemo {
         System.out.println("--- 5. 不可变集合 ---");
         List<String> immutable = Collections.unmodifiableList(list);
         System.out.println("unmodifiableList: " + immutable);
-
-        // JDK 9+ 简洁写法
-        List<String> jdk9List = List.of("a", "b", "c");
-        System.out.println("List.of(): " + jdk9List);
-
-        Set<String> jdk9Set = Set.of("a", "b", "c");
-        System.out.println("Set.of(): " + jdk9Set);
         System.out.println();
 
         // 6. 单元素集合
