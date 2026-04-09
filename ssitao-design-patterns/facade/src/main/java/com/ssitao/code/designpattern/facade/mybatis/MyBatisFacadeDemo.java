@@ -1,5 +1,7 @@
 package com.ssitao.code.designpattern.facade.mybatis;
 
+import java.sql.Connection;
+
 /**
  * MyBatis中的外观模式示例
  *

@@ -249,7 +249,7 @@ public class PerformanceDemo {
         System.out.println("\nRuntime:");
         System.out.println("  JVM Name: " + runtimeBean.getVmName());
         System.out.println("  JVM Version: " + runtimeBean.getVmVersion());
-        System.out.println("  Java Home: " + runtimeBean.getJavaHome());
+        System.out.println("  Java Home: " + System.getProperty("java.home"));
         System.out.println("  Uptime: " + runtimeBean.getUptime() / 1000 + "s");
 
         // GarbageCollectorMXBeans
