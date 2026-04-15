@@ -3,13 +3,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.learn</groupId>
-    <artifactId>crazy-java-basic</artifactId>
+    <parent>
+        <groupId>com.ssitao.code</groupId>
+        <artifactId>ssitao-code-learn</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>ssitao-code-crazy-java-basic</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Crazy Java Basic</name>
+    <name>ssitao-code-crazy-java-basic</name>
     <description>疯狂Java：突破程序员基本功16课 学习代码</description>
 
     <properties>

@@ -32,7 +32,7 @@ public class LambdaDemo {
         System.out.println("方法引用：" + parser.apply("123"));
 
         // 类型推断
-        Comparator<String> comp = (s1, s2) -> s1.length() - s2.length();
+        Comparator<String> comp = (sa, sb) -> sa.length() - sb.length();
         names.sort(comp);
         System.out.println("排序后：" + names);
     }

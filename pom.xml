@@ -17,6 +17,7 @@
         <module>ssitao-code-datastruct</module>
         <module>ssitao-code-effectivejava</module>
         <module>ssitao-code-jdk</module>
+        <module>ssitao-code-crazy-java-basic</module>
     </modules>
 
     <properties>
