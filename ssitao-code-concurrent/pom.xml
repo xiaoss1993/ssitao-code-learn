@@ -16,6 +16,7 @@
         <module>thread-base</module>
         <module>java-concurrency-examples</module>
         <module>juc-source-learning</module>
+        <module>disruptor</module>
     </modules>
 
     <properties>
