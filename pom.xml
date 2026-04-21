@@ -10,7 +10,7 @@
     <name>ssitao-code-learn</name>
     <url>http://maven.apache.org</url>
     <modules>
-        <module>ssitao-design-patterns</module>
+        <module>ssitao-code-design-pattern</module>
         <module>ssitao-code-learn-mybatis</module>
         <module>ssitao-code-concurrent</module>
         <module>ssitao-code-langchain</module>
